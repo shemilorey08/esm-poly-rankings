@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ESM Poly Rankings | Nigerian Polytechnic Information Platform</title>
+
+    <meta name="description" content="Explore Nigerian polytechnic rankings, institutional information, NBTE accreditation records, comparisons and educational news.">
+
+    <meta name="theme-color" content="#10182d">
+
+    <link rel="icon" href="images/esm-logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+            <img src="images/esm-logo.png" alt="ESM Logo">
+            <div>
+                <h2>ESM</h2>
+                <span>POLY RANKINGS</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#rankings">Rankings</a>
+            <a href="#directory">Polytechnics</a>
+            <a href="#nbte">NBTE Information</a>
+            <a href="#articles">News & Articles</a>
+            <a href="#about">About</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="eyebrow">YOUR EDUCATION. YOUR INFORMATION.</span>
+
+            <h1>
+                Discover.
+                <span>Compare.</span>
+                Make Better Choices.
+            </h1>
+
+            <p>
+                Your destination for Nigerian polytechnic rankings,
+                institutional information, accreditation records,
+                educational news and student resources.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#rankings" class="btn btn-gold">
+                    Explore Rankings
+                </a>
+
+                <a href="#directory" class="btn btn-outline">
+                    Explore Polytechnics
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-logo">
+            <img src="images/esm-logo.png" alt="ESM Poly Rankings">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK INFORMATION -->
+
+<section class="quick-info">
+
+    <div class="container info-grid">
+
+        <div class="info-card">
+            <h3>36 + FCT</h3>
+            <p>States Covered</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Explore</h3>
+            <p>Polytechnic Rankings</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Verified</h3>
+            <p>NBTE Information</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Stay Updated</h3>
+            <p>Education News</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT INTRODUCTION -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">ABOUT ESM</span>
+
+            <h2>Welcome to ESM Poly Rankings</h2>
+
+            <p>
+                ESM Poly Rankings is an educational information
+                platform focused on Nigerian polytechnics.
+                Our aim is to make institutional information,
+                rankings, comparisons and educational updates
+                easier to discover.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RANKINGS -->
+
+<section class="section section-dark" id="rankings">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">INSTITUTIONAL RANKINGS</span>
+
+            <h2>Explore Polytechnic Rankings</h2>
+
+            <p>
+                Discover our published rankings and comparisons
+                across Nigerian polytechnics.
+            </p>
+
+        </div>
+
+        <div class="empty-state">
+
+            <div class="empty-icon">🏆</div>
+
+            <h3>Rankings Coming Soon</h3>
+
+            <p>
+                Our ranking categories and editions are being
+                prepared. Published rankings will include their
+                methodology and publication date.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POLYTECHNIC DIRECTORY -->
+
+<section class="section" id="directory">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">INSTITUTIONAL DIRECTORY</span>
+
+            <h2>Explore Nigerian Polytechnics</h2>
+
+            <p>
+                Find institutional information and explore
+                polytechnics across Nigeria.
+            </p>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="polySearch"
+                placeholder="Search for a polytechnic..."
+                aria-label="Search polytechnics"
+            >
+
+            <button type="button" id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+        <div id="polyResults" class="poly-grid">
+
+            <div class="empty-state">
+                <div class="empty-icon">🏫</div>
+                <h3>Directory Coming Soon</h3>
+                <p>
+                    Our institutional directory will appear here
+                    once the verified records have been added.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NBTE INFORMATION -->
+
+<section class="section section-dark" id="nbte">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">ACCREDITATION INFORMATION</span>
+
+            <h2>NBTE Institutional & Programme Records</h2>
+
+            <p>
+                Access information about approved institutions
+                and accredited programmes using official
+                National Board for Technical Education records.
+            </p>
+
+        </div>
+
+        <div class="nbte-box">
+
+            <h3>Know the Difference</h3>
+
+            <p>
+                Institutional approval and programme accreditation
+                are different. Accreditation is assessed at the
+                programme level, and individual programmes may
+                have different accreditation statuses.
+            </p>
+
+            <p>
+                ESM will identify its sources and verification
+                dates so visitors can understand the information
+                being presented.
+            </p>
+
+            <a
+                href="https://web.nbte.gov.ng/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-gold"
+            >
+                Visit Official NBTE Website
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTICLES -->
+
+<section class="section" id="articles">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">EDUCATION & UPDATES</span>
+
+            <h2>Latest News & Articles</h2>
+
+            <p>
+                Stay informed with educational news,
+                admission updates, institutional developments
+                and student guides.
+            </p>
+
+        </div>
+
+        <div class="empty-state">
+
+            <div class="empty-icon">📰</div>
+
+            <h3>Articles Coming Soon</h3>
+
+            <p>
+                New articles and educational updates will
+                be published here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+</main>
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+
+            <img src="images/esm-logo.png" alt="ESM Logo">
+
+            <h3>ESM POLY RANKINGS</h3>
+
+            <p>
+                Information. Rankings. Education.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#rankings">Rankings</a>
+            <a href="#directory">Polytechnics</a>
+            <a href="#nbte">NBTE Information</a>
+            <a href="#articles">Articles</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Connect With Us</h4>
+
+            <a
+                href="https://www.tiktok.com/@shemilorey08"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © <span id="currentYear"></span>
+            ESM Poly Rankings. All rights reserved.
+        </p>
+
+        <p>
+            Independent educational information platform.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/database.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
