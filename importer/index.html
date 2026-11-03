@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESM NBTE Importer</title><style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #101b32;
+        color: white;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: #192540;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        color: #e5b94c;
+    }
+
+    button {
+        background: #e5b94c;
+        color: #101b32;
+        border: none;
+        padding: 14px;
+        width: 100%;
+        border-radius: 7px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    #result {
+        margin-top: 20px;
+        padding: 12px;
+        background: #101b32;
+        border-radius: 7px;
+        overflow-wrap: anywhere;
+    }
+</style>
+
+</head><body><div class="container"><h1>ESM NBTE Importer</h1>
+
+<p>
+    Official NBTE Polytechnic Register Connection Test
+</p>
+
+<button onclick="testConnection()">
+    TEST NBTE CONNECTION
+</button>
+
+<div id="result">
+    Waiting for test...
+</div>
+
+</div><script>
+async function testConnection() {
+
+    const result = document.getElementById("result");
+
+    result.textContent = "Connecting to NBTE...";
+
+    const url =
+        "https://digitalnbte.nbte.gov.ng/Public/Institutions?type=polytechnic";
+
+    try {
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("HTTP error: " + response.status);
+        }
+
+        const html = await response.text();
+
+        if (!html.includes("Institutions on the register")) {
+            throw new Error("NBTE page structure not recognised.");
+        }
+
+        result.innerHTML =
+            "<strong>Connection successful!</strong><br><br>" +
+            "NBTE register page retrieved.<br>" +
+            "Downloaded page size: " +
+            html.length.toLocaleString() +
+            " characters.";
+
+    } catch (error) {
+
+        result.innerHTML =
+            "<strong>Connection unsuccessful.</strong><br><br>" +
+            error.message +
+            "<br><br>We may need another extraction method.";
+
+    }
+}
+</script></body>
+      </html>
